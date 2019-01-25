@@ -34,11 +34,11 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. What is the difference between a function and a method?
 
-Methods are functions but specifically there are functions that have been tacked onto objeects.
+Methods are functions but specifically, methods are functions that have been tacked onto objeects.
 
 3. What is closure?
 
-A closure exists wher a function has access to variables outside of it's function body. These variables are available outwardly, such that the inner-most function in a set of nested functions has access to all variables declared by the functions around it.
+A closure exists where a function has access to variables (and bindings) outside of it's function body. These variables are available outwardly, such that the inner-most function in a set of nested functions has access to all variables declared by the functions it is nested by.
 
 4. Describe the four rules of the 'this' keyword.
 
