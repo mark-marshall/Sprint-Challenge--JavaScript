@@ -36,7 +36,7 @@ consume("Mary", "Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: In Javascript, deeper levels of scope have access to the bindings declared in the scope of their parents, grandparents, and eventually the window Object. By this principle, myFunction has access to the "external" variable, and in turn nestedFunction has access to the "internal" variable.
+// Explanation: In Javascript, functions have access to the bindings declared in the scope of their parents, grandparents, and eventually the window Object. By this principle, myFunction has access to the "external" variable, and in turn nestedFunction has access to the "internal" variable.
 
 const external = "I'm outside the function";
 
