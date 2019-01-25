@@ -235,11 +235,17 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 const animalNames = [];
 
-zooAnimals.forEach(function(item) {
+//zooAnimals.forEach(function(item) {
+//animalNames.push(
+//`Name: ${item.animal_name}, Scientific: ${item.scientific_name}`
+//);
+//});
+
+zooAnimals.forEach(item =>
   animalNames.push(
     `Name: ${item.animal_name}, Scientific: ${item.scientific_name}`
-  );
-});
+  )
+);
 
 console.log(animalNames);
 
@@ -248,9 +254,11 @@ console.log(animalNames);
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
-const lowerCase = zooAnimals.map(function(item) {
-  return item.animal_name.toLowerCase();
-});
+//const lowerCase = zooAnimals.map(function(item) {
+//return item.animal_name.toLowerCase();
+//});
+
+const lowerCase = zooAnimals.map(item => item.animal_name.toLowerCase());
 
 console.log(lowerCase);
 
@@ -259,9 +267,11 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = zooAnimals.filter(function(item) {
-  return item.population < 5;
-});
+//const largerPopulation = zooAnimals.filter(function(item) {
+//return item.population < 5;
+//});
+
+const largerPopulation = zooAnimals.filter(item => item.population < 5);
 
 console.log(largerPopulation);
 
@@ -270,9 +280,14 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = zooAnimals.reduce(function(accumulator, specimen) {
-  return accumulator + specimen.population;
-}, 0);
+//const populationTotal = zooAnimals.reduce(function(accumulator, specimen) {
+//return accumulator + specimen.population;
+//}, 0);
+
+const populationTotal = zooAnimals.reduce(
+  (accumulator, specimen) => accumulator + specimen.population,
+  0
+);
 
 console.log(populationTotal);
 
